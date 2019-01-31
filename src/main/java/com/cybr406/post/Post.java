@@ -3,6 +3,7 @@ package com.cybr406.post;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Post {
@@ -16,6 +17,26 @@ public class Post {
   @Lob
   @Type(type = "org.hibernate.type.TextType")
   String content;
+
+  Date date;
+
+  Integer starRating;
+
+  public Integer getStarRating() {
+    return starRating;
+  }
+
+  public void setStarRating(Integer starRating) {
+    this.starRating = starRating;
+  }
+
+  public Date getDate() {
+    return date;
+  }
+
+  public void setDate(Date date) {
+    this.date = date;
+  }
 
   public Long getId() {
     return id;
